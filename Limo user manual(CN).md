@@ -25,11 +25,11 @@
 
 <img src="LIMO_image/车体.svg" alt="img" style="zoom:33%;" />        <img src="LIMO_image/电池.svg" alt="img" style="zoom:33%;" />     <img src="LIMO_image/充电器-01.svg"  width="300"  height = "300" />
 
-LIMO高配版主体（安装越野轮X4）X1      电池X1          充电器X1
+LIMO高配版主体（安装越野轮X4）X1                                                                电池X1                                                                                    充电器X1
 
 <img src="LIMO_image/麦轮套装.svg" alt="img" style="zoom:30%;" /> <img src="LIMO_image/履带套装.svg" alt="img" style="zoom:30%;" /> <img src="LIMO_image/螺丝刀.svg"  width="400"  height = "400" />
 
-麦克纳姆轮X4            履带X2         内六角螺丝刀X1
+​				麦克纳姆轮X4                                                           		       履带X2          																内六角螺丝刀X1
 
 <img src="LIMO_image/螺丝盒.svg"   width="400"  height = "400"  /> 
 
