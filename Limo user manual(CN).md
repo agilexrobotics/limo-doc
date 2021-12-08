@@ -22,28 +22,19 @@ Version: 1.0.0
 
 ### 1.2 产品列表
 
-| 名称           | 数量                  |
-| -------------- | --------------------- |
-| LIMO高配版主体 | X1                    |
-| 电池           | X1                    |
-| 充电器         | X1                    |
-| 越野轮         | X4                    |
-| 麦克纳姆轮     | X4                    |
-| 履带           | x2                    |
-| 十字螺丝刀     | X1                    |
-| 螺丝           | M3*12mmx20、M3*5mmx20 |
+| 名称                            | 数量                  |
+| ------------------------------- | --------------------- |
+| LIMO高配版主体（安装越野轮 X4） | X1                    |
+| 电池                            | X1                    |
+| 充电器                          | X1                    |
+| 麦克纳姆轮                      | X4                    |
+| 履带                            | x2                    |
+| 内六角螺丝刀                    | X1                    |
+| 螺丝                            | M3 12mmx20、M3 5mmx20 |
 
-<img src="LIMO_image/车体.svg" alt="img" style="zoom:33%;" />        <img src="LIMO_image/电池.svg" alt="img" style="zoom:33%;" />     <img src="LIMO_image/充电器-01.svg"  width="300"  height = "300" />
+ <img src="./LIMO_image/产品列表_1.png" style="zoom:80%;" />
 
-LIMO高配版主体（安装越野轮X4）X1                                                                电池X1                                                                                    充电器X1
-
-<img src="LIMO_image/麦轮套装.svg" alt="img" style="zoom:30%;" /> <img src="LIMO_image/履带套装.svg" alt="img" style="zoom:30%;" /> <img src="LIMO_image/螺丝刀.svg"  width="400"  height = "400" />
-
-​				麦克纳姆轮X4                                                           		       履带X2          																内六角螺丝刀X1
-
-<img src="LIMO_image/螺丝盒.svg"   width="400"  height = "400"  /> 
-
-螺丝盒X1 螺丝盒内容：M3*12mmx20、M3*5mmx20
+<img src="./LIMO_image/产品列表_2.png" style="zoom:80%;" />
 
 ### 1.3 性能参数
 
@@ -288,10 +279,10 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 | 颜色     | 状态              |
 | -------- | ----------------- |
 | 红色闪烁 | 低电量/主控报警   |
+| 红色常亮 | 程序暂停          |
 | 绿色     | 阿克曼模式        |
 | 黄色     | 四轮差速/履带模式 |
 | 蓝色     | 麦克纳姆轮模式    |
-| 白色     | 手动照明          |
 
  
 
