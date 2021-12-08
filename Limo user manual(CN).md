@@ -2241,19 +2241,27 @@ rosrun rqt_tf_tree rqt_tf_tree
 
 ### 附录 6、固件升级
 
-固件升级的软件在limo的主目录下，文件名称为LimonTest_Nano，升级所需要的固件在我司官方GitHub中，链接为：
+固件升级的软件在limo的主目录下，文件名称为LimonTest_Nano，升级所需要的固件在我司官方GitHub中，链接为：https://github.com/agilexrobotics/limo-doc
+
+注：如limo中的LimonTest_Nano不能正常打开，请到我司官方GitHub中下载最新的软件，链接为：https://github.com/agilexrobotics/limo-doc
 
 下载完所需要升级的固件，接下来开始操作步骤：
 
-注：升级固件时，电量消耗比较大，需要插上nano的micro usb口，进行额外供电。
+#### 1、进入固件升级模式
 
-1、首先确保LimonTest_Nano软件具备运行权限，打开终端，在终端中输入命令：
+关机状态下连续按两下开机键进入固件升级模式，当开机键闪烁时，成功进入固件升级模式，等待几秒钟之后，nano会正常启动。
+
+#### 2、赋予LimonTest_Nano软件运行权限
+
+打开终端，在终端中输入命令：
 
 ```
 chmod +x LimonTest_Nano 
 ```
 
-2、启动软件，在终端中输入命令：
+#### 3、启动软件，开始升级固件
+
+在终端中输入命令：
 
 ```
 ./LimonTest_Nano 
@@ -2263,17 +2271,17 @@ chmod +x LimonTest_Nano
 
 ![](./LIMO_image/gujian_1.png)
 
-3、选择对应的串口，一般情况下，选择串口ttyTHS1，点击Open Serial，打开串口，然后点击Load Firmware File 选择需要升级的固件
+选择对应的串口，一般情况下，选择串口ttyTHS1，点击Open Serial，打开串口，然后点击Load Firmware File 选择需要升级的固件
 
 ![](./LIMO_image/gujian_2.png)
 
 ![](./LIMO_image/gujian_3.png)
 
-4、选择固件列表中的固件信息，然后点击Start Upgrade按钮开始固件升级。
+选择固件列表中的固件信息，然后点击Start Upgrade按钮开始固件升级。
 
 ![](LIMO_image/gujian_4.png)
 
-5、 升级成功，点击 Close Serial按钮，关闭串口
+升级成功，点击 Close Serial按钮，关闭串口
 
 ### 附录7、导航功能包参数配置
 
