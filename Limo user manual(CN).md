@@ -22,15 +22,16 @@ Version: 1.0.0
 
 ### 1.2 产品列表
 
-| 名称                            | 数量                  |
-| ------------------------------- | --------------------- |
-| LIMO高配版主体（安装越野轮 X4） | X1                    |
-| 电池                            | X1                    |
-| 充电器                          | X1                    |
-| 麦克纳姆轮                      | X4                    |
-| 履带                            | x2                    |
-| 内六角螺丝刀                    | X1                    |
-| 螺丝                            | M3 12mmx20、M3 5mmx20 |
+| 名称                            | 数量                   |
+| ------------------------------- | ---------------------- |
+| LIMO高配版主体（安装越野轮 X4） | X1                     |
+| 电池                            | X1                     |
+| 充电器                          | X1                     |
+| 麦克纳姆轮                      | X4                     |
+| 履带                            | x2                     |
+| APP_Nexus                       | X1                     |
+| 内六角螺丝刀                    | X1                     |
+| 螺丝                            | M3 12mm x3、M3 5mm x20 |
 
  <img src="./LIMO_image/产品列表_1.png" style="zoom:80%;" />
 
@@ -360,13 +361,27 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 
 <img src="LIMO_image/模态判断.svg" style="zoom:60%;" />
 
-| 颜色     | 状态              |
-| -------- | ----------------- |
-| 红色闪烁 | 低电量/主控报警   |
-| 红色常亮 | 程序暂停          |
-| 绿色     | 阿克曼模式        |
-| 黄色     | 四轮差速/履带模式 |
-| 蓝色     | 麦克纳姆轮模式    |
+<table>
+<tr>
+	<td>插销状态</td>
+	<td>车灯颜色</td>
+	<td>当前模式</td>
+</tr>
+	<tr>
+        <td rowspan="2"> 插入</td> 
+        <td>黄色</td>
+        <td>四轮差速/履带模式</td>
+    </tr>
+    <tr>
+        <td>蓝色</td>
+        <td>麦克纳姆轮模式</td>
+    </tr>
+<tr>
+	<td>拔起</td>
+	<td>绿色</td>
+	<td>阿克曼</td>
+</tr>
+</table>
 
 （3）遥控器说明
 
@@ -404,15 +419,17 @@ IOS端下载：在AppStore搜索Nexus并下载
 
 Android端扫描下面二维码：
 
-![img](LIMO_image/APP_1.png) 
+![img](LIMO_image/App_1.png) 
 
-下载链接：https://www.pgyer.com/lbDi
+下载链接：https://www.pgyer.com/CjOI
 
 2、下载App成功后，打开App,如图1-1所示，连接LIMO_xxxxxx的蓝牙；安卓手机点击左上的的蓝牙图标进入蓝牙扫描界面  
 
-![img](LIMO_image/APP_2.png) 
+![img](LIMO_image/App_2.png) 
 
 3、遥控limo
+
+![img](LIMO_image/App_3.png)
 
 左边控制杆：控制limo前进后退
 
@@ -430,6 +447,10 @@ Mailun：需要手动将LIMO小车切换麦轮模式，主要控制前进后退�
 
 4、APP设置说明
 
+![img](LIMO_image/App_4.png)
+
+![img](LIMO_image/App_5.png)
+
 Language switch：通过点击右边的按钮 English/简体，来切换英语和中文
 
 Left-romte min speed：设置LIMO小车的最小速度
@@ -445,12 +466,6 @@ veer calibration：设置零点矫正，先点击+号，然后点击确定Verify
 BlueTooth：点击弹出蓝牙扫描界面
 
 Bluetooth management：点击random 生成任意以LIMO_xxxx的命名的名字，确认OK并同步修改小车蓝牙的名字，注意此时蓝牙会断开，并会提醒重新连接蓝牙，重新连接蓝牙后可以继续控制小车；当app再次启动，小车的蓝牙名字已经显示修改成功的状态
-
-![img](LIMO_image/APP_3.png)
-
-![img](LIMO_image/APP_4.png)
-
-
 
 ### 1.9 远程桌面连接
 
@@ -931,7 +946,7 @@ roslaunch limo_bringup limo_lidar_rviz.launch
 
 ![](./LIMO_image/lidar.png)
 
-这时候可以把遥控器调为遥控模式，遥控小车进行移动，这时会看到激光的数据也会跟着变化。
+这时候可以把遥控器/App调为遥控模式，遥控小车进行移动，这时会看到激光的数据也会跟着变化。
 
 ### 5.2 gmapping 建图
 
