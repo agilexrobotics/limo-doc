@@ -860,7 +860,7 @@ roslaunch limo_bringup limo_start.launch pub_odom_tf:=false
 然后新开启一个终端，在终端中输入命令：
 
 ```
-roslaunch limo_bringup limo_lidar_rviz.launch
+roslaunch limo_bringup lidar_rviz.launch
 ```
 
 成功运行之后会看到rviz可视化工具打开，其中显示的绿色数据就是雷达扫描出来的激光数据。
