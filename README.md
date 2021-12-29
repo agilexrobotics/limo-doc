@@ -63,11 +63,14 @@ Version: 1.0.0
         <td>4.8kg</td>
 	</tr>
     	<tr>
-		<td rowspan="2">负载</td>
-            <td>四轮差速（1kg）</td>
+		<td rowspan="3">负载</td>
+            <td>差速/履带模式（1kg）</td>
             <tr>
 				<td>阿克曼模式（4kg）</td>
 			</tr>
+    		<tr>
+                <td>麦轮模式（4kg）</td>
+    		</tr>
 	</tr>
     	<tr>
 		<td>最小离地间隙</td>
