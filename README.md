@@ -1,33 +1,41 @@
-
-
-# LIMO使用手册
-
-中文 (CN)| English
-
 [TOC]
 
+# LIMO 产品用户使用和开发手册
 
+中文 | EN
 
-## 一、LIMO简介
+Version: 1.0.0
+
+| 版本  | 更新信息          | 责任人          |
+| ----- | ----------------- | --------------- |
+| 1.0.0 | [1]、第一版本开放 | Agilex ROS TEAM |
+|       |                   |                 |
+|       |                   |                 |
+
+## 一、LIMO产品简介
 
 ### 1.1 产品简介
 
-松灵机器人LIMO是全球首款集四种运动模态于一体的ROS开发平台，提供了适应场景更广泛、更符合行业应用要求的学习平台，适用于机器人教育、功能研发、产品开发。通过创新性的机械设计，能实现四轮差速、阿克曼、履带型、麦克纳姆轮运动模式的快速切换，可在配套的专业沙盘中快速建立多场景实拟教学和测试，LIMO搭载NVIDIA Jeston Nano、EAI XL2激光雷达、RealSense深度相机等高性能传感器配置，可实现精确的自主定位、SLAM建图、路线规划和自主避障、自主倒车入库、红绿灯识别等丰富功能。
+松灵机器人LIMO是全球首款集四种运动模态于一体的ROS开发平台，提供了适应场景更广泛、更符合行业应用要求的学习平台，适用于机器人教育、功能研发、产品开发。通过创新性的机械设计，能实现四轮差速、阿克曼、履带型、麦克纳姆轮运动模式的快速切换，可在配套的专业沙盘中快速建立多场景实拟教学和测试，LIMO搭载NVIDIA Jeston Nano、EAI XL2激光雷达、深度相机等高性能传感器配置，可实现精确的自主定位、SLAM建图、路线规划和自主避障、自主倒车入库、红绿灯识别等丰富功能。
 
 同时，松灵机器人联合国内ROS社区教学开创者古月居，致力于结合企业用人和行业应用需求，打造基于LIMO开发小车的全新ROS精品课程，助力院校科研教学，让学生达到更高的行业应用技术要求。
 
 ### 1.2 产品列表
 
-| 名称           | 数量 |
-| -------------- | ---- |
-| LIMO高配版主体 | X1   |
-| 电池           | X1   |
-| 充电器         | X1   |
-| 越野轮         | X4   |
-| 麦克纳姆轮     | X4   |
-| 履带           | x2   |
-| 十字螺丝刀     | X1   |
-| 螺丝           | 若干 |
+| 名称                            | 数量                   |
+| ------------------------------- | ---------------------- |
+| LIMO高配版主体（安装越野轮 X4） | X1                     |
+| 电池                            | X1                     |
+| 充电器                          | X1                     |
+| 麦克纳姆轮                      | X4                     |
+| 履带                            | x2                     |
+| APP_Nexus                       | X1                     |
+| 内六角螺丝刀                    | X1                     |
+| 螺丝                            | M3 12mm x3、M3 5mm x20 |
+
+ <img src="./LIMO_image/产品列表_1.png" style="zoom:80%;" />
+
+<img src="./LIMO_image/产品列表_2.png" style="zoom:80%;" />
 
 ### 1.3 性能参数
 
@@ -52,7 +60,7 @@
 	</tr>
     	<tr>
 		<td>自重</td>
-        <td>4.8kg（待验证）</td>
+        <td>4.8kg</td>
 	</tr>
     	<tr>
 		<td rowspan="2">负载</td>
@@ -130,7 +138,7 @@
 	</tr>
 	<tr>
 		<td>深度相机</td>
-        <td>奥比中光DaBai</td>
+        <td>奥比中光 DaBai/RealSense D435</td>
 	</tr>
     	<tr>
 		<td>工控机</td>
@@ -168,9 +176,12 @@
 
 
 
+
+
+
 ### 1.4 Nvidia Jetson Nano介绍
 
-Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门级边缘 AI 应用程序和设备而设计。依托完善的 NVIDIA JetPack™ SDK 包含用于深度学习、计算机视觉、图形、多媒体等方面的加速库。搭载在LIMO高配版本，可以用于拓展机器人导航定位、图像处理、语音识别等技术的拓展。
+Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门级边缘 AI 应用程序和设备而设计。依托完善的 NVIDIA JetPack™ SDK 包含用于深度学习、计算机视觉、图形、多媒体等方面的加速库。搭载在limo高配版本，可以用于拓展机器人导航定位、图像处理、语音识别等技术的拓展。
 
 | GPU      | 128-Core Maxwell                                             |
 | -------- | ------------------------------------------------------------ |
@@ -270,10 +281,10 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 | 颜色     | 状态              |
 | -------- | ----------------- |
 | 红色闪烁 | 低电量/主控报警   |
+| 红色常亮 | 程序暂停          |
 | 绿色     | 阿克曼模式        |
 | 黄色     | 四轮差速/履带模式 |
 | 蓝色     | 麦克纳姆轮模式    |
-| 白色     | 手动照明          |
 
  
 
@@ -289,15 +300,15 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 
 车顶预留8个M3螺丝孔位，以及两条3.2mm宽的槽口；
 
-<img src="LIMO_image/安装孔尺寸-顶视1.svg" style="zoom:30;" />
+<img src="LIMO_image/安装孔尺寸-顶视1.svg"   width="800"  height = "600" />
 
 两车门预留4个M3螺丝孔位，水平展开获得更大安装平台；
 
-<img src="LIMO_image/安装孔尺寸-顶视2.svg" style="zoom:32;" />
+<img src="LIMO_image/安装孔尺寸-顶视2.svg" width="800"  height = "600"  />
 
 车底前后各预留四个M3螺丝孔位；
 
-<img src="LIMO_image/安装孔尺寸-底视.svg" style="zoom:30;" /> 
+<img src="LIMO_image/安装孔尺寸-底视.svg" width="800"  height = "600" /> 
 
 （6）丰富的交互体验：
 
@@ -309,7 +320,7 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 
 （1）切换阿克曼模式：
 
-先将两侧插销拔起，顺时针转30度，使两插销上较长的线指向车体正前方 ![](LIMO_image/插销1.png)，即可卡住，车灯变为绿色则切换成功；
+先将两侧插销拔起，顺时针转30度，使两插销上较长的线指向车体正前方 ![](LIMO_image/插销1.png)，即可卡住，车灯变为绿色且常亮时，则切换成功；
 
 <img src="LIMO_image/阿克曼-切换1.svg" style="zoom:60%;" />
 
@@ -317,7 +328,7 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 
 （2）切换四轮差速模式：
 
-  拔起来顺时针转30度，使两插销上较短的线指向车体正前方![](LIMO_image/插销2.png)，此时为插入状态，微调轮胎角度对准孔位让插销插入，车灯变为黄色则切换成功；
+  拔起来顺时针转30度，使两插销上较短的线指向车体正前方![](LIMO_image/插销2.png)，此时为插入状态，微调轮胎角度对准孔位让插销插入，车灯变为黄色且常亮时，则切换成功；
 
 <img src="LIMO_image/四轮差速-切换1.svg" style="zoom:60%;" /> 
 
@@ -339,7 +350,7 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 
 <img src="LIMO_image/麦轮角度示意图.svg" style="zoom:60%;" /> 
 
-注：确保每个麦轮安装角度！
+**注：切换至麦轮模式的时候，请确保每个麦轮安装的角度如上图所示**
 
 ### 1.8 操作说明
 
@@ -352,46 +363,117 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 <img src="LIMO_image/模态判断.svg" style="zoom:60%;" />
 
 <table>
+<tr>
+	<td>插销状态</td>
+	<td>车灯颜色</td>
+	<td>当前模式</td>
+</tr>
 	<tr>
-		<td>插销状态</td>
-		<td>车灯颜色</td>
-        <td>当前模式</td>
-	</tr>
-	<tr>
-		<td rowspan="2">插入</td>
-		<td>黄色</td>
+        <td rowspan="2"> 插入</td> 
+        <td>黄色</td>
         <td>四轮差速/履带模式</td>
-	</tr>
-	<tr>
-		<td>蓝色</td>
+    </tr>
+    <tr>
+        <td>蓝色</td>
         <td>麦克纳姆轮模式</td>
-	</tr>
-    	<tr>
-		<td>拔起</td>
-        <td>绿色</td>
-        <td>阿克曼模式</td>
-	</tr>
-    <table>
+    </tr>
+<tr>
+	<td>拔起</td>
+	<td>绿色</td>
+	<td>阿克曼</td>
+</tr>
+</table>
 
-（3）遥控说明：
 
-<img src="LIMO_image/遥控器.jpg" style="zoom:8%;" />
+（3）遥控器说明
 
-遥控器开机，6通道拨到中间档位即可遥控，左摇杆控制车体前进后退以及麦轮模式下的左右横移和斜移，右摇杆控制车体方向；
+遥控准备：右滑开机键开机，将SWB通道拨到中间即可遥控控制，下方为指令控制，上方关闭控制；
 
-麦轮模式：差速模式下，通道8处于最下档时切换麦轮控制模式，处于中上档时切回差速模式；
+<img src="LIMO_image/遥控器-01.svg"  width="800"  height = "800" /> 
 
-舵机校准：当在阿克曼模式下走不直时需要进行舵机校准，先将7通道拨到中间，然后用右遥控调整舵机角度，角度合适时将5通道向上拨两下即算校准，之后遥控小车判断是否能够在阿克曼模式下走直，如此反复，直到可以走直为准。
+ 
+
+差速模式：将SWD通道拨到中下档位为四轮差速模式，左摇杆控制前进后退，右摇杆控制原地左右转；
+
+<img src="LIMO_image/遥控器-02.svg"  width="800"  height = "800" /> 
+
+ 
+
+履带模式：与四轮差速模式的运动模型一样；
+
+<img src="LIMO_image/遥控器-03.svg"  width="800"  height = "800" /> 
+
+ 
+
+麦轮模式：SWD通道在上档位时为麦克纳姆轮模式，左摇杆控制运动方向，右摇杆控制左右原地转；
+
+<img src="LIMO_image/遥控器-04.svg"  width="800"  height = "800" /> 
+
+阿克曼模式：在车体上切换为阿克曼模式，开启遥控器控制即可，左摇杆控制前进后退，右摇杆控制左右方向；
+
+<img src="LIMO_image/遥控器-05.svg"  width="800"  height = "800" /> 
 
 （4）APP遥控说明
 
+1、 首先在手机上下载我司提供的APP--Nexus，下载方式如下：
 
+IOS端下载：在AppStore搜索Nexus并下载
+
+Android端扫描下面二维码：
+
+![img](LIMO_image/App_1.png) 
+
+下载链接：https://www.pgyer.com/CjOI
+
+2、下载App成功后，打开App,如图1-1所示，连接LIMO_xxxxxx的蓝牙；安卓手机点击左上的的蓝牙图标进入蓝牙扫描界面  
+
+![img](LIMO_image/App_2.png) 
+
+3、遥控limo
+
+![img](LIMO_image/App_3.png)
+
+左边控制杆：控制limo前进后退
+
+右边控制杆：控制limo左转右转
+
+中间进度条：速度值显示
+
+模式切换：总共有三种模式，阿克曼运动模式：ackermann，四轮差速运动模式：4wd，麦克纳姆运动模式：mailun
+
+ ackerMann：需要手动将LIMO小车切换阿克曼模式，主要用于校准零点、控制前进后退以及转动角度；
+
+4wd：需要手动将LIMO小车切换四轮差速模式，主要控制前进后退、转换方向以及原地旋转；
+
+Mailun：需要手动将LIMO小车切换麦轮模式，主要控制前进后退、转换方向以及原地旋转
+
+4、APP设置说明
+
+![img](LIMO_image/App_4.png)
+
+![img](LIMO_image/App_5.png)
+
+Language switch：通过点击右边的按钮 English/简体，来切换英语和中文
+
+Left-romte min speed：设置LIMO小车的最小速度
+
+Left-romte max speed：设置LIMO小车的最大速度
+
+right-romte min speed：设置LIMO小车的最小旋转速度
+
+right-romte max speed：设置LIMO小车的最大旋转速度
+
+veer calibration：设置零点矫正，先点击+号，然后点击确定Verify，当校准成功会弹出提醒框Successful calibration
+
+BlueTooth：点击弹出蓝牙扫描界面
+
+Bluetooth management：点击random 生成任意以LIMO_xxxx的命名的名字，确认OK并同步修改小车蓝牙的名字，注意此时蓝牙会断开，并会提醒重新连接蓝牙，重新连接蓝牙后可以继续控制小车；当app再次启动，小车的蓝牙名字已经显示修改成功的状态
 
 ### 1.9 远程桌面连接
 
 #### 1.9.1 下载安装NoMachine
 
-首先在个人电脑下载相应的软件，下载链接：https://www.nomachine.com/download，根据自己电脑的操作系统和架构下载相应的版本。让limo和电脑连接到同一个WIFI下。
+首先在个人电脑下载相应的软件，下载链接：https://www.nomachine.com/download，根据自己电脑的操作系统和架构下载相应的版本。让limo和电脑连接到同一个WIFI下。                         
 
 #### 1.9.2 连接wifi
 
@@ -480,7 +562,7 @@ LIMO默认随车配备一个12.6V 2A的充电器，可满足客户的充电需�
 | 绿色闪烁         | 即将充满 |
 | 绿色             | 已充满   |
 
-##### **充电注意事项：**
+##### 充电注意事项：
 
 ------
 
@@ -491,24 +573,7 @@ LIMO默认随车配备一个12.6V 2A的充电器，可满足客户的充电需�
 
 - 当前电池从8.25V到充满电状态大约需要2.5小时，电池充满电电压约为12.6V。
 
-### 2.2 整车功耗
-
-| 项目                     | 测试条件                                 | 电流 | 整车功耗 |
-| ------------------------ | ---------------------------------------- | ---- | -------- |
-| 关机静态电流             |                                          |      |          |
-| 开机待机电流             | 四轮差速模式、Nano处于待机模式           |      |          |
-| 四轮差速模式原地自旋电流 | 四轮差速模式、Nano处于待机模式、粗糙地面 |      |          |
-| 四轮差速模式正常工作电流 | 四轮差速模式、Nano处于待机模式、粗糙地面 |      |          |
-| 阿克曼模式正常工作电流   | 阿克曼模式、Nano处于待机模式、粗糙地面   |      |          |
-
-##### 注意：
-
-------
-
-- 以上参数为实验室测试结果，实际结果受温度、湿度、地面粗糙度等各种环境因素影响。
-- LIMO带有过流保护功能，当系统检测到LIMO长时间处于大电流工作状态时，为了保护电池和电机会进入过流保护状态、此时小车会发出嘀嘀声报警。
-
-### 2.3 使用环境及安全注意事项
+### 2.2 使用环境及安全注意事项
 
 ------
 
@@ -520,7 +585,7 @@ LIMO默认随车配备一个12.6V 2A的充电器，可满足客户的充电需�
 - 使用过程有疑问，请按照相关说明手册进行操作或者咨询相关技术人员；
 - 请勿未经技术支持和允许，私自改装内部设备结构。
 
-### 2.4 供电拓扑
+### 2.3 供电拓扑
 
 ![](LIMO_image/电源拓扑.png)
 
@@ -530,7 +595,7 @@ LIMO默认随车配备一个12.6V 2A的充电器，可满足客户的充电需�
 
 - USB HUB 的三个USB接口合计输出电流最大为0.5A。
 
-### 2.5 通信拓扑
+### 2.4 通信拓扑
 
 ![](LIMO_image/通信拓扑.png)
 
@@ -586,6 +651,8 @@ limo_base下有四个文件夹，分别为include、launch、msg、src。include
 
 可以通过一段简单的指令控制limo向前运动
 
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 1、启动底盘，打开一个终端，在终端中输入命令：
 
 ```
@@ -602,10 +669,12 @@ rostopic pub /cmd_vel geometry_msgs/Twist "linear:
 angular:
   x: 0.0
   y: 0.0
-  z: 0.0" -r 10
+  z: 0.0" 
 ```
 
 注：整个命令复制到终端中输入即可，不要手动输入
+
+在终端输入命令之后，limo会先前行走一小段距离，然后停下。
 
 驱动程序源码中使用到的函数：
 
@@ -654,6 +723,8 @@ Python版本的代码比较简洁，仅有三个文件组成驱动程序，init.
 
 可以通过以下命令访问此目录，打开终端，在终端中输入命令：
 
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 ```
 cd agilex_ws/src/limo_ros/limo_base/script
 ```
@@ -663,6 +734,8 @@ cd agilex_ws/src/limo_ros/limo_base/script
 ```
 python3 limomove.py
 ```
+
+在终端输入命令之后，limo会先前行走一段距离，然后停下。
 
 驱动程序中所使用的函数名称：
 
@@ -717,6 +790,8 @@ python3 limomove.py
 
 启动底盘控制节点
 
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 ```
 roslaunch limo_base limo_base.launch
 ```
@@ -742,6 +817,8 @@ ICR为运动旋转中心，CENTER为机器人几何学中心，COM为机器人�
 更换完成之后，运行以下命令，我们就可以启用键盘或者手柄来控制。
 
 启动底盘控制节点
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
 
 ```
 roslaunch limo_base limo_base.launch
@@ -771,6 +848,8 @@ roslaunch limo_bringup limo_teletop_keyboard.launch
 
 启动底盘控制节点
 
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 ```
 roslaunch limo_base limo_base.launch
 ```
@@ -781,7 +860,7 @@ roslaunch limo_base limo_base.launch
 roslaunch limo_bringup limo_teletop_keyboard.launch  
 ```
 
-注：当在阿克曼模式下走不直时需要进行舵机校准，先将7通道拨到中间，然后用右遥控调整舵机角度，角度合适时将5通道向上拨两下即算校准，之后遥控小车判断是否能够在阿克曼模式下走直，如此反复，直到可以走直为准。
+注：当在阿克曼模式下走不直时需要进行舵机校准。
 
 ### 4.4 麦克纳姆运动模式
 
@@ -803,11 +882,13 @@ roslaunch limo_bringup limo_teletop_keyboard.launch
 
 ![](LIMO_image/麦轮_4.png)
 
-先将轮毂盖和轮胎拆下，只保留轮毂电机，然后保证每个麦轮的小滚子朝向车体中心，用包装里的M3*5螺丝将麦轮安装上，最后需要用遥控/APP调整至麦轮模式。
+先将轮毂盖和轮胎拆下，只保留轮毂电机，然后保证每个麦轮的小滚子朝向车体中心，用包装里的M3*5螺丝将麦轮安装上，遥控操作的时候需要将遥控器/APP调整至麦轮模式。
 
 遥控手柄在四轮差速控制模式下，通道8处于最下档时切换为麦轮控制模式，处于中上档时切回差速模式；
 
 启动底盘控制节点
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
 
 ```
 roslaunch limo_base limo_base.launch
@@ -821,10 +902,10 @@ roslaunch limo_bringup limo_teletop_keyboard.launch
 
 移动机器人的运动模态有很多，每一种都有其优缺点，在实际场景中我们可以根据场景特点和需求，选用最合适的运动模态。下表总结了四种运动模式的优缺点，仅供参看。
 
-| 模态 | 四轮差速                     | 履带                             | 阿克曼                                         | 麦克纳姆                                           |
-| ---- | ---------------------------- | -------------------------------- | ---------------------------------------------- | -------------------------------------------------- |
-| 优点 | 运动性能好，控制简单         | 适应性强，适用于多种复杂场地     | 与汽车的运动模式相同，便于做深入的自动驾驶研究 | 机动性好，可以全向运动                             |
-| 缺点 | 转向有滑移，轮胎的磨损比较大 | 滑动转向阻力大，对履带的磨损较大 | 转弯半径有限，轮胎磨损小                       | 场地要求较高，辊子间不连续，运动时有震动，磨损较大 |
+| 模态 | 四轮差速                     | 履带                                             | 阿克曼                                         | 麦克纳姆                                           |
+| ---- | ---------------------------- | ------------------------------------------------ | ---------------------------------------------- | -------------------------------------------------- |
+| 优点 | 运动性能好，控制简单         | 适应性强，具有良好的越野性能，适用于多种复杂场地 | 与汽车的运动模式相同，便于做深入的自动驾驶研究 | 机动性好，可以全向运动                             |
+| 缺点 | 转向有滑移，轮胎的磨损比较大 | 滑动转向阻力大，对履带的磨损较大                 | 转弯半径有限，轮胎磨损小                       | 场地要求较高，辊子间不连续，运动时有震动，磨损较大 |
 
 
 
@@ -867,7 +948,7 @@ roslaunch limo_bringup lidar_rviz.launch
 
 ![](./LIMO_image/lidar.png)
 
-这时候可以把遥控器调为遥控模式，遥控小车进行移动，这时会看到激光的数据也会跟着变化。
+这时候可以把遥控器/App调为遥控模式，遥控小车进行移动，这时会看到激光的数据也会跟着变化。
 
 ### 5.2 gmapping 建图
 
@@ -876,6 +957,10 @@ roslaunch limo_bringup lidar_rviz.launch
 Gmapping是基于滤波SLAM框架的常用开源SLAM算法。Gmapping有效利用了车轮里程计信息，对激光雷达的频率要求不高，在构建小场景地图时，所需的计算量较小且精度较高。这里通过使用ROS封装了的GMapping功能包来实现limo的建图。
 
 #### 5.2.2 gmapping建图实践操作
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+注：建图过程中limo的速度尽量慢点，速度太快会影响建图的效果
 
 首先需要启动雷达，打开一个新终端，在终端中输入命令：
 
@@ -897,9 +982,19 @@ roslaunch limo_bringup limo_gmapping.launch
 
 构建完地图之后，需要运行以下命令，把地图保存到指定目录：
 
+1、切换到需要保存地图的目录下，这里把地图保存到/agilex_ws/limo_bringup/maps，在终端中输入命令：
+
 ```
-rosrun map_server map_saver –f ~/agilex_ws/limo_bringup/maps/map
+cd /agilex_ws/limo_bringup/maps/
 ```
+
+2、切换到/agilex_ws/limo_bringup/maps 之后，继续在终端中输入命令：
+
+```
+rosrun map_server map_saver –f map1
+```
+
+注：map1为保存地图的名称，保存地图时应避免地图的名称重复
 
 ### 5.3 cartographer建图
 
@@ -908,6 +1003,10 @@ rosrun map_server map_saver –f ~/agilex_ws/limo_bringup/maps/map
 cartographer是google推出的一套基于图优化的SLAM算法。该算法的主要目标是实现低计算资源消耗，达到实时SLAM的目的。该算法主要分为两个部分，第一个部分称为Local SLAM, 该部分通过一帧帧的Laser Scan建立并维护一系列的Submap，而所谓的submap就是一系列的Grid Map。算法的第二个部分，称为Global SLAM的部分，就是通过Loop Closure来进行闭环检测，来消除累积误差：当一个submap构建完成，也就是不会再有新的laser scan插入到该submap时，算法会将该submap加入到闭环检测中。
 
 #### 5.3.2 cartographer建图实践操作
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+注：建图过程中limo的速度尽量慢点，速度太快会影响建图的效果
 
 首先需要启动雷达，打开一个新终端，在终端中输入命令：
 
@@ -947,7 +1046,9 @@ rosrun cartographer_ros cartographer_pbstream_to_ros_map -map_filestem=${HOME}/a
 
 生成对应的pgm和yaml，放于${HOME}/agilex_ws/src/limo_ros/limo_bringup/maps/mymap.pbstream目录下 
 
+注：在建图过程中，终端中会出现一些警告，这是由于速度过快，数据处理不及时造成的，可以忽略
 
+![](LIMO_image/carto_2.png)
 
 ##  六、雷达导航
 
@@ -989,9 +1090,11 @@ TEB_planner
 
 “TEB”全称Time Elastic Band（时间弹性带）Local Planner，该方法针对全局路径规划器生成的初始轨迹进行后续修正(modification)，从而优化机器人的运动轨迹，属于局部路径规划。在轨迹优化过程中，该算法拥有多种优化目标，包括但不限于：整体路径长度、轨迹运行时间、与障碍物的距离、通过中间路径点以及机器人动力学、运动学以及几何约束的符合性。“TEB方法”明确考虑了运动状态下时空方面的动态约束，如机器人的速度和加速度是有限制的。
 
-### 6.2 limo自主导航
+### 6.2 limo导航功能
 
 注：四轮差速模式和全向轮模式、履带模式下，导航运行的文件一样
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
 
 （1）首先启动雷达，在终端中输入命令：
 
@@ -1002,20 +1105,20 @@ roslaunch limo_bringup limo_start.launch pub_odom_tf:=false
 （2）启动导航功能，在终端中输入命令：
 
 ```
-roslaunch limo_bringup limo_navigetion_diff.launch
+roslaunch limo_bringup limo_navigation_diff.launch
 ```
 
 注：如果是阿克曼运动模式，请运行
 
 ```
-roslaunch limo_bringup limo_navigetion_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackeman.launch
 ```
 
 启动成功之后会打开rviz界面，如图 
 
 ![](./LIMO_image/navi_1.png)
 
-注：如需自定义打开的地图，请打开limo_navigetion_diff.launch 文件修改参数, 请把map02修改为需要更换的地图名称。
+注：如需自定义打开的地图，请打开limo_navigation_diff.launch 文件修改参数, 请把map02修改为需要更换的地图名称。
 
 ![](./LIMO_image/navi_diff.png)
 
@@ -1034,6 +1137,42 @@ roslaunch limo_bringup limo_navigetion_ackeman.launch
 地图中将会生成一条紫色的路径，手柄切换至指令模式，limo将自动导航到目标点
 
 ![](./LIMO_image/navi_5.png)
+
+###  6.3 limo路径巡检
+
+（1）首先启动雷达，开启一个新的终端，在终端中输入命令：
+
+```
+roslaunch limo_bringup limo_start.launch pub_odom_tf:=false
+```
+
+（2）启动导航功能，开启一个新的终端，在终端中输入命令：
+
+```
+roslaunch limo_bringup limo_navigation_diff.launch
+```
+
+注：如果是阿克曼运动模式，请运行
+
+```
+roslaunch limo_bringup limo_navigation_ackeman.launch
+```
+
+（3）启动路径记录功能，开启一个新的终端，在终端中输入命令：
+
+```
+roslaunch agilex_pure_pursuit record_path.launch
+```
+
+路径记录结束之后终止路径记录程序，在终端中输入命令为：Ctrl+c 
+
+（4）启动路径巡检功能，开启一个新的终端，在终端中输入命令：
+
+注：把手柄调至指令模式
+
+```
+roslaunch agilex_pure_pursuit pure_pursuit.launch
+```
 
 
 
@@ -1066,6 +1205,8 @@ ORBBEC®Dabai 是基于双目结构光 3D 成像技术的深度相机，主要�
 | 尺寸(毫米)                       | 长59.6X宽17.4X厚11.1mm                                       |
 
 了解ORBBEC®Dabai的基本参数之后，开始实践操作
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c 
 
 首先启动ORBBEC®Dabai摄像头，运行下面的命令：
 
@@ -1101,6 +1242,8 @@ roslaunch astra_camera dabai_u3.launch
 
 了解realsense的基本参数之后，开始实践操作
 
+ 注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 首先启动realsense摄像头，运行下面的命令：
 
 ```
@@ -1113,7 +1256,15 @@ roslaunch realsense2_camera rs_camera.launch
 
 ### 7.3 查看深度相机信息
 
-成功打开深度相机之后，接下来启动rviz，查看深度相机所拍摄到的图像和采集的深度信息；开启一个新终端，输入命令：rviz，然后添加Image组件就能看到摄像头所拍摄的画面，操作步骤如下。
+成功打开深度相机之后，接下来启动rviz，查看深度相机所拍摄到的图像和采集的深度信息。
+
+开启一个新终端，输入命令：
+
+```
+rviz
+```
+
+然后添加Image组件就能看到摄像头所拍摄的画面，操作步骤如下。
 
 ![](LIMO_image/rviz_1.png)
 
@@ -1148,6 +1299,10 @@ fixed frame选择camera_link, DepthCloud组件选择对应的话题
 rtabmap算法提供一个与时间和尺度无关的基于外观的定位与构图解决方案。针对解决大型环境中的在线闭环检测问题。方案的思想在于为了满足实时性的一些限制，闭环检测是仅仅利用有限数量的一些定位点，同时在需要的时候又能够访问到整个地图的定位点。
 
 ### 7.3 rtabmap算法建图
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+注：建图过程中limo的速度尽量慢点，速度太快会影响建图的效果
 
 （1）启动雷达，在终端中输入命令：
 
@@ -1193,6 +1348,8 @@ roslaunch limo_bringup limo_rtabmap_orbbec.launch
 
 ### 7.4 rtabmap算法导航
 
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 （1）启动雷达，在终端中输入命令：
 
 ```
@@ -1226,13 +1383,13 @@ roslaunch limo_bringup limo_rtabmap_orbbec.launch localization:=true
 （4）启动move_base，在终端中输入命令：
 
 ```
-roslaunch limo_bringup limo_navigetion_rtabmap.launch
+roslaunch limo_bringup limo_navigation_rtabmap.launch
 ```
 
 注：如果是阿克曼运动模式，请运行
 
 ```
-roslaunch limo_bringup limo_navigetion_rtabmap_ackerman.launch
+roslaunch limo_bringup limo_navigation_rtabmap_ackerman.launch
 ```
 
 （5）启动rviz查看建图效果，在终端中输入命令：
@@ -1249,7 +1406,7 @@ roslaunch limo_bringup limo_navigetion_rtabmap_ackerman.launch
 
 ![](./LIMO_image/rtabmap_5.png)
 
-
+ 
 
 ## 八、 视觉模块
 
@@ -1261,7 +1418,9 @@ roslaunch limo_bringup limo_navigetion_rtabmap_ackerman.launch
 
 #### 8.1.2 运行功能
 
-启动节点管理，在终端中输入命令：
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+以Realsense为例子，启动节点管理，在终端中输入命令：
 
 ```
 roscore
@@ -1281,6 +1440,8 @@ rostopic echo /detect_word_reslut
 
 ![](./LIMO_image/shibie.png)
 
+ 
+
 ### 8.2 识别红绿灯
 
 #### 8.2.1 功能简介
@@ -1289,7 +1450,9 @@ rostopic echo /detect_word_reslut
 
 #### 8.1.2 运行功能
 
-启动realsense深度相机，在终端中输入命令：
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+以Realsense为例子，启动realsense深度相机，在终端中输入命令：
 
 ```
  roslaunch realsense2_camera rs_camera.launch
@@ -1315,7 +1478,7 @@ rostopic echo /detect_word_reslut
 
 ![](./LIMO_image/traffic_light.png)
 
-
+ 
 
 ## 九、语音模块
 
@@ -1326,6 +1489,8 @@ rostopic echo /detect_word_reslut
 通过nano的外接声卡把声音录制成wav文件，用可以离线识别的语音库pocketsphinx实现语音识别。该功能对英文的识别率较高，中文的识别率较差。
 
 #### 9.1.2 运行功能
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
 
 在终端中输入以下命令，当终端中出现recording时，开始录制声音，3秒中之后录制完毕，终端会出现done
 
@@ -1343,6 +1508,8 @@ rosrun voice  demo_voice2word.py output.wav
 
 ![](./LIMO_image/voice_2word.png)
 
+ 
+
 ###  9.2 语音控制
 
 #### 9.2.1 功能简介
@@ -1351,13 +1518,15 @@ rosrun voice  demo_voice2word.py output.wav
 
 #### 9.2.2 运行功能
 
-启动底盘节点
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+1、启动底盘节点，底盘节点启动之后，把手柄调至指令模式
 
 ```
  roslaunch limo_base limo_base.launch 
 ```
 
-启动语音控制节点，启动之后会出现下图的界面，通过输入1，回车之后进入语音录制模式，并控制limo；输入q则退出
+2、启动语音控制节点，启动之后会出现下图的界面，通过输入1，回车之后进入语音录制模式，并控制limo；输入q则退出
 
 ```
 rosrun voice voice_ctr_node.py 
@@ -1381,7 +1550,7 @@ rosrun voice voice_ctr_node.py
 
 #### 2.1 目录操作命令
 
-##### (1) 目录切换cd
+##### (1) 目录切换 cd
 
 ① cd /     切换到根目录
 
@@ -1393,7 +1562,7 @@ rosrun voice voice_ctr_node.py
 
 ⑤ cd -     切换到上次访问的目录
 
-##### (2) 目录查看ls
+##### (2) 目录查看 ls
 
 ① ls     查看当前目录下的所有目录和文件
 
@@ -1403,13 +1572,19 @@ rosrun voice voice_ctr_node.py
 
 ④ ls /dir   查看指定目录下的所有目录和文件如：ls /usr
 
-##### (3) 创建目录mkdir
+##### (3) 创建目录 mkdir
 
 ① mkdir aaa 在当前目录下创建一个名为aaa的目录
 
 ② mkdir /usr/aa 在指定目录下创建一个名为aaa的目录
 
-##### (4) 显示隐藏目录Ctrl+h
+##### (4) 显示隐藏目录 Ctrl+h
+
+在文件夹中，通过 Ctrl+h可以显示文件夹中的隐藏文件夹
+
+##### (5) 终止程序 Ctrl+c
+
+在终端中输入命令 Ctrl+c ，强制终止正在执行的程序
 
 #### 2.2 ROS常用命令
 
@@ -1897,6 +2072,8 @@ source ~/.bashrc
 
 1.启动底盘节点
 
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
 在运行节点之前，首先需要确保底盘节点已经成功启动：
 
 ```
@@ -2080,11 +2257,55 @@ rosrun rqt_tf_tree rqt_tf_tree
 
 ![](LIMO_image/balena_6.png)
 
-### 附录6、导航功能包参数配置
+### 附录 6、固件升级
+
+固件升级的软件在limo的主目录下，文件名称为LimonTest_Nano，升级所需要的固件在我司官方GitHub中，链接为：https://github.com/agilexrobotics/limo-doc
+
+注：如limo中的LimonTest_Nano不能正常打开，请到我司官方GitHub中下载最新的软件，链接为：https://github.com/agilexrobotics/limo-doc
+
+下载完所需要升级的固件，接下来开始操作步骤：
+
+#### 1、进入固件升级模式
+
+关机状态下连续按两下开机键进入固件升级模式，当开机键闪烁时，成功进入固件升级模式，等待几秒钟之后，nano会正常启动。
+
+#### 2、赋予LimonTest_Nano软件运行权限
+
+打开终端，在终端中输入命令：
+
+```
+chmod +x LimonTest_Nano 
+```
+
+#### 3、启动软件，开始升级固件
+
+在终端中输入命令：
+
+```
+./LimonTest_Nano 
+```
+
+软件成功打开之后，点击升级按钮，显示的画面如下图所示：
+
+![](./LIMO_image/gujian_1.png)
+
+选择对应的串口，一般情况下，选择串口ttyTHS1，点击Open Serial，打开串口，然后点击Load Firmware File 选择需要升级的固件
+
+![](./LIMO_image/gujian_2.png)
+
+![](./LIMO_image/gujian_3.png)
+
+选择固件列表中的固件信息，然后点击Start Upgrade按钮开始固件升级。
+
+![](LIMO_image/gujian_4.png)
+
+升级成功，点击 Close Serial按钮，关闭串口
+
+### 附录7、导航功能包参数配置
 
 如需要自己尝试调试功能包中的参数，可参考以下列表。
 
-#### 6.1 gmapping功能包中可供配置的参数
+#### 7.1 gmapping功能包中可供配置的参数
 
 注：gmapping功能包的参数的配置文件为：~/agilex_ws/src/limo_ros/limo_bringup/launch/limo_gmapping.launch
 
@@ -2127,7 +2348,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 | ~occ_thresh               | float  | 0.25      | 栅格地图占用率的阀值                                         |
 | ~maxRange                 | float  | ——        | 传感器的最大范围                                             |
 
-#### 6.2 cartographer功能包中可供配置的参数
+#### 7.2 cartographer功能包中可供配置的参数
 
 注：cartographer功能包的参数文件为~/agilex_ws/src/limo_ros/limo_bringup/param/build_map_2d.lua
 
@@ -2148,7 +2369,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 | pose_publish_period_sec         | 5e-3           | 发布姿势的间隔（以秒为单位），例如 5e-3，频率为200 Hz。      |
 | trajectory_publish_period_sec   | 30e-3          | 以秒为单位发布轨迹标记的时间间隔，例如， 30e-3持续30毫秒     |
 
-#### 6.3 amcl功能包中可供配置的参数
+#### 7.3 amcl功能包中可供配置的参数
 
 注：amcl功能包参数配置文件为：amcl_param_diff.yaml（该文件为四轮差速、全向轮、履带运动模式所用的amcl参数文件）、amcl_param.yaml（该文件为阿克曼运动模式所用的amcl参数文件）
 
@@ -2175,7 +2396,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 | use_map_topic       | bool   | -1             | 当设置为true时，AMCL将订阅地图主题，而不是进行服务调用以接收其地图。 |
 | first_map_only      | bool   | -1             | 当设置为true时，AMCL将只使用它订阅的第一个映射，而不是每次接收到新的映射时更新。 |
 
-#### 6.4 DWA中可供配置的参数
+#### 7.4 DWA中可供配置的参数
 
 注：DWA配置参数文件为~/agilex_ws/src/limo_ros/limo_bringup/param/diff/planner.yaml
 
@@ -2212,7 +2433,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 | oscillation_reset_dist  | double |  0.05  | 在重置振荡标志之前机器人必须以米为单位移动多远               |
 | prune_plan              | bool   |  true  | 定义机器人沿路径移动时是否吃掉计划。如果设置为 true，一旦机器人移动超过它们 1 米，点就会从计划的末端掉下来。 |
 
-#### 6.5 TEB可供配置的参数
+#### 7.5 TEB可供配置的参数
 
 注：TEB参数配置文件为：~/agilex_ws/src/limo_ros/limo_bringup/param/carlike2/teb_local_planner_params.yaml
 
