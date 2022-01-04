@@ -178,10 +178,6 @@ Version: 1.0.0
 </table>
 
 
-
-
-
-
 ### 1.4 Nvidia Jetson Nano介绍
 
 Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门级边缘 AI 应用程序和设备而设计。依托完善的 NVIDIA JetPack™ SDK 包含用于深度学习、计算机视觉、图形、多媒体等方面的加速库。搭载在limo高配版本，可以用于拓展机器人导航定位、图像处理、语音识别等技术的拓展。
