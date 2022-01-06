@@ -285,12 +285,10 @@ The two vehicle lights are RGB LEDs, and 5 high-contrast colors are used for ind
 | Color        | Status                             |
 | ------------ | ---------------------------------- |
 | Red flashing | Low battery/master control alarm   |
+| Red          | Software shut down                 |
 | Green        | Ackermann mode                     |
 | Yellow       | Four-wheel differential/track mode |
 | Blue         | Mecanum wheel mode                 |
-| Red          | Software shut down                 |
-
- 
 
 （3）Doors on both sides can be expanded to reserve a Type-C interface and two USB2.0 interfaces for convenient debugging;
 
@@ -366,13 +364,27 @@ First remove the hubcaps and tires, leaving only the hub motor, then ensure that
 
 <img src="LIMO_image_EN/模态判断.svg" style="zoom:60%;" />
 
-| **Color**    | **Status**                         |
-| ------------ | ---------------------------------- |
-| Red flashing | Low battery/master control alarm   |
-| Red          | Software shut down                 |
-| Green        | Ackermann mode                     |
-| Yellow       | Four-wheel differential/track mode |
-| Blue         | Mecanum wheel mode                 |
+<table>
+<tr>
+	<td>Latch status</td>
+	<td>Color of light</td>
+	<td>Current mode</td>
+</tr>
+	<tr>
+        <td rowspan="2"> Push down</td> 
+        <td>Yellow</td>
+        <td>4-wheel diff or Track</td>
+    </tr>
+    <tr>
+        <td>Blue</td>
+        <td>Macanum wheel</td>
+    </tr>
+<tr>
+	<td>Pull up</td>
+	<td>Green</td>
+	<td>Ackerman</td>
+</tr>
+</table>
 
 （3）Instructions on APP remote control
 
@@ -910,7 +922,7 @@ After launching successfully, the terminal will output the following log informa
 Then launch a new terminal and enter the command in the terminal:
 
 ```
-roslaunch limo_bringup limo_lidar_rviz.launch
+roslaunch limo_bringup lidar_rviz.launch
 ```
 
 After successfully running, you will see the rviz visualization tool open, and the green data displayed is the laser data scanned by the LiDAR.
@@ -954,7 +966,7 @@ After building the map, you need to run the following command to save the map to
 1. Switch to the directory where you need to save the map, save the map to /agilex_ws/limo_bringup/maps, and enter the command in the terminal:
 
 ```
-cd /agilex_ws/limo_bringup/maps/
+cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/
 ```
 
 2. After switching to /agilex_ws/limo_bringup/maps, continue to enter the command in the terminal:
