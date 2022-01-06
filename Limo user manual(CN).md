@@ -983,7 +983,7 @@ roslaunch limo_bringup limo_gmapping.launch
 1、切换到需要保存地图的目录下，这里把地图保存到/agilex_ws/limo_bringup/maps，在终端中输入命令：
 
 ```
-cd /agilex_ws/limo_bringup/maps/
+cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/
 ```
 
 2、切换到/agilex_ws/limo_bringup/maps 之后，继续在终端中输入命令：
@@ -1116,7 +1116,7 @@ roslaunch limo_bringup limo_navigation_ackeman.launch
 
 ![](./LIMO_image/navi_1.png)
 
-注：如需自定义打开的地图，请打开limo_navigation_diff.launch 文件修改参数, 请把map02修改为需要更换的地图名称。
+注：如需自定义打开的地图，请打开limo_navigation_diff.launch 文件修改参数, 文件所在目录为：~/agilex_ws/src/limo_ros/limo_bringup/launch。请把map02修改为需要更换的地图名称。
 
 ![](./LIMO_image/navi_diff.png)
 
@@ -1536,11 +1536,11 @@ rosrun voice voice_ctr_node.py
 
 ### 附录1、三视图
 
-<img src="LIMO_image/三视图尺寸-正视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-正视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_image/三视图尺寸-左视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-侧视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_image/三视图尺寸-俯视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-俯视.svg"  width="800"  height = "600" />
 
 
 
@@ -2233,7 +2233,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 
 #### 5.2 下载需要烧录的镜像
 
-这里以我司提供的官方镜像为例，使用百度云盘下载镜像，下载链接为：
+这里以我司提供的官方镜像为例，使用百度云盘下载镜像，下载链接为：https://pan.baidu.com/s/1MyyAR4y-Umyf_OwMk-rinA 提取码: 50d9 
 
 #### 5.3 软件使用说明
 

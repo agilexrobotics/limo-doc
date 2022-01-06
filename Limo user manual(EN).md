@@ -1509,11 +1509,11 @@ rosrun voice voice_ctr_node.py
 
 ### Appendix 1. Three Views
 
-<img src="LIMO_image_EN/三视图尺寸-正视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-正视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_image_EN/三视图尺寸-左视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-侧视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_image_EN/三视图尺寸-俯视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-俯视.svg"  width="800"  height = "600" />
 
 
 
@@ -2210,7 +2210,7 @@ Download and install balenaetcher on a PC; download link: https://www.balena.io/
 
 #### 5.2 Download the image to be burned
 
-Here is an example of the official image provided by our company. Use Baidu cloud disk to download the image, and the download link is:
+Here is an example of the official image provided by our company. Use Baidu cloud disk to download the image, and the download link is:https://pan.baidu.com/s/1MyyAR4y-Umyf_OwMk-rinA Extract the code: 50d9 
 
 #### 5.3 Instructions on software usage
 

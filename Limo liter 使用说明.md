@@ -1,3 +1,5 @@
+[TOC]
+
 # Limo liter 使用说明
 
 ## 一、LIMO Lite简介
@@ -359,11 +361,11 @@ Bluetooth management：点击random 生成任意以LIMO_xxxx的命名的名字�
 
 8.三视尺寸图
 
-<img src="LIMO_lite_image/三视图-正视图.svg" style="zoom:67%;" />
+<img src="LIMO_lite_image/三视图-正视图.svg"  width="800"  height = "600" />
 
-<img src="LIMO_lite_image/三视图-侧视.svg" style="zoom:67%;" />
+<img src="LIMO_lite_image/三视图-侧视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_lite_image/三视图-俯视.svg" style="zoom:67%;" />
+<img src="LIMO_lite_image/三视图-俯视.svg"  width="800"  height = "600" />
 
 
 
