@@ -963,7 +963,7 @@ At this time, you can adjust the handle to remote control mode to control limo t
 
 After building the map, you need to run the following command to save the map to the specified directory:
 
-1. Switch to the directory where you need to save the map, save the map to /agilex_ws/limo_bringup/maps, and enter the command in the terminal:
+1. Switch to the directory where you need to save the map, save the map to ~/agilex_ws/src/limo_ros/limo_bringup/maps/, and enter the command in the terminal:
 
 ```
 cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/
@@ -1094,7 +1094,7 @@ roslaunch limo_bringup limo_navigation_diff.launch
 **Note:** If it is Ackermann motion mode, please run
 
 ```
-roslaunch limo_bringup limo_navigation_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackerman.launch
 ```
 
 After launching successfully, the rviz interface will be opened, as shown in the figure:
@@ -1138,7 +1138,7 @@ roslaunch limo_bringup limo_navigation_diff.launch
 **Note:** If it is Ackermann motion mode, please run
 
 ```
-roslaunch limo_bringup limo_navigation_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackerman.launch
 ```
 
 （3）Launch the path recording function, open a new terminal, and enter the command in the terminal:
@@ -1461,7 +1461,31 @@ Launch the traffic light recognition function:
 
 ![](./LIMO_image_EN/traffic_light.png)
 
- 
+### 8.3  Lifting barrier control
+
+#### 8.3.1 Function introduction
+
+LIMO can figure out the distance from the lifting barrier by detecting the QR code on it. When the distance is less than 0.3m，LIMO will send a message to the topic **/chatter_updown** to control the lifting barrier up and down.
+
+#### 8.1.2 Run function
+
+Note：Use Ctrl+C command to end all the processes before running the below commands.
+
+Take ORBBEC®Dabai as an example. Start realsense RGBD camera. Terminal command is：
+
+```
+ roslaunch astra_camera dabai_u3.launch 
+```
+
+Start the detection function of QR code, the command is：
+
+```
+roslaunch detect_ros agx_ar_pose_dabai.launch 
+```
+
+![](./LIMO_image_EN/lifter.png)
+
+When **pub num : 1** shown in the Terminal，the lifting barrier will be up . Then the LIMO will have three seconds to pass through the lifting barrier.  
 
 ## 9 Voice module
 

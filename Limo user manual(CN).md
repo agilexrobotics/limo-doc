@@ -980,7 +980,7 @@ roslaunch limo_bringup limo_gmapping.launch
 
 构建完地图之后，需要运行以下命令，把地图保存到指定目录：
 
-1、切换到需要保存地图的目录下，这里把地图保存到/agilex_ws/limo_bringup/maps，在终端中输入命令：
+1、切换到需要保存地图的目录下，这里把地图保存到~/agilex_ws/src/limo_ros/limo_bringup/maps/，在终端中输入命令：
 
 ```
 cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/
@@ -1109,7 +1109,7 @@ roslaunch limo_bringup limo_navigation_diff.launch
 注：如果是阿克曼运动模式，请运行
 
 ```
-roslaunch limo_bringup limo_navigation_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackerman.launch
 ```
 
 启动成功之后会打开rviz界面，如图 
@@ -1153,7 +1153,7 @@ roslaunch limo_bringup limo_navigation_diff.launch
 注：如果是阿克曼运动模式，请运行
 
 ```
-roslaunch limo_bringup limo_navigation_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackerman.launch
 ```
 
 （3）启动路径记录功能，开启一个新的终端，在终端中输入命令：
@@ -1476,7 +1476,33 @@ rostopic echo /detect_word_reslut
 
 ![](./LIMO_image/traffic_light.png)
 
- 
+### 8.3 控制升降杆
+
+#### 8.3.1 功能简介
+
+通过ar-track-alvar功能包识别升降杆上面的二维码，判断出Limo与升降杆的位置距离，当小于0.3M时，Limo会发送一个消息到/chatter_updown话题中，从而控制升降杆。
+
+#### 8.1.2 运行功能
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+以ORBBEC®Dabai为例子，启动ORBBEC®Dabai深度相机，在终端中输入命令：
+
+```
+ roslaunch astra_camera dabai_u3.launch 
+```
+
+启动二维码标签识别功能，在终端中输入命令：
+
+```
+roslaunch detect_ros agx_ar_pose_dabai.launch 
+```
+
+![](./LIMO_image/lifter.png)
+
+当终端中出现pub num : 1时，升降杆将会抬起来，这时limo将有三秒钟的时间通过升降杆
+
+ 	
 
 ## 九、语音模块
 

@@ -64,11 +64,11 @@ Version: 1.0.0
 	</tr>
     	<tr>
 		<td rowspan="3">负载</td>
-            <td>差速/履带模式（1kg）</td>
+            <td>四轮差速（1kg）</td>
             <tr>
 				<td>阿克曼模式（4kg）</td>
 			</tr>
-    		<tr>
+        	<tr>
                 <td>麦轮模式（4kg）</td>
     		</tr>
 	</tr>
@@ -176,9 +176,6 @@ Version: 1.0.0
         <td>蓝牙/极限距离10m</td>
 	</tr>
 </table>
-
-
-
 
 
 
@@ -985,7 +982,7 @@ roslaunch limo_bringup limo_gmapping.launch
 
 构建完地图之后，需要运行以下命令，把地图保存到指定目录：
 
-1、切换到需要保存地图的目录下，这里把地图保存到/agilex_ws/limo_bringup/maps，在终端中输入命令：
+1、切换到需要保存地图的目录下，这里把地图保存到~/agilex_ws/src/limo_ros/limo_bringup/maps/，在终端中输入命令：
 
 ```
 cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/
@@ -1114,14 +1111,14 @@ roslaunch limo_bringup limo_navigation_diff.launch
 注：如果是阿克曼运动模式，请运行
 
 ```
-roslaunch limo_bringup limo_navigation_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackerman.launch
 ```
 
 启动成功之后会打开rviz界面，如图 
 
 ![](./LIMO_image/navi_1.png)
 
-注：如需自定义打开的地图，请打开limo_navigation_diff.launch 文件修改参数, 请把map02修改为需要更换的地图名称。
+注：如需自定义打开的地图，请打开limo_navigation_diff.launch 文件修改参数, 文件所在目录为：~/agilex_ws/src/limo_ros/limo_bringup/launch。请把map02修改为需要更换的地图名称。
 
 ![](./LIMO_image/navi_diff.png)
 
@@ -1158,7 +1155,7 @@ roslaunch limo_bringup limo_navigation_diff.launch
 注：如果是阿克曼运动模式，请运行
 
 ```
-roslaunch limo_bringup limo_navigation_ackeman.launch
+roslaunch limo_bringup limo_navigation_ackerman.launch
 ```
 
 （3）启动路径记录功能，开启一个新的终端，在终端中输入命令：
@@ -1481,7 +1478,33 @@ rostopic echo /detect_word_reslut
 
 ![](./LIMO_image/traffic_light.png)
 
- 
+### 8.3 控制升降杆
+
+#### 8.3.1 功能简介
+
+通过ar-track-alvar功能包识别升降杆上面的二维码，判断出Limo与升降杆的位置距离，当小于0.3M时，Limo会发送一个消息到/chatter_updown话题中，从而控制升降杆。
+
+#### 8.1.2 运行功能
+
+注：在运行命令之前，请确保其他终端中的程序已经终止，终止命令为：Ctrl+c
+
+以ORBBEC®Dabai为例子，启动ORBBEC®Dabai深度相机，在终端中输入命令：
+
+```
+ roslaunch astra_camera dabai_u3.launch 
+```
+
+启动二维码标签识别功能，在终端中输入命令：
+
+```
+roslaunch detect_ros agx_ar_pose_dabai.launch 
+```
+
+![](./LIMO_image/lifter.png)
+
+当终端中出现pub num : 1时，升降杆将会抬起来，这时limo将有三秒钟的时间通过升降杆
+
+ 	
 
 ## 九、语音模块
 
@@ -1541,11 +1564,11 @@ rosrun voice voice_ctr_node.py
 
 ### 附录1、三视图
 
-<img src="LIMO_image/三视图尺寸-正视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-正视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_image/三视图尺寸-左视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-侧视.svg"  width="800"  height = "600" />
 
-<img src="LIMO_image/三视图尺寸-俯视.svg" style="zoom:60%;" />
+<img src="LIMO_image/三视尺寸-俯视.svg"  width="800"  height = "600" />
 
 
 
@@ -2238,7 +2261,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 
 #### 5.2 下载需要烧录的镜像
 
-这里以我司提供的官方镜像为例，使用百度云盘下载镜像，下载链接为：
+这里以我司提供的官方镜像为例，使用百度云盘下载镜像，下载链接为：https://pan.baidu.com/s/1MyyAR4y-Umyf_OwMk-rinA 提取码: 50d9 
 
 #### 5.3 软件使用说明
 
