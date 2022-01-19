@@ -1480,7 +1480,7 @@ Take ORBBEC®Dabai as an example. Start realsense RGBD camera. Terminal command 
 Start the detection function of QR code, the command is：
 
 ```
-roslaunch detect_ros agx_ar_pose_dabai.launch 
+roslaunch detect_ros agx_ar_pose.launch 
 ```
 
 ![](./LIMO_image_EN/lifter.png)
