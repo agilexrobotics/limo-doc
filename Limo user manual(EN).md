@@ -2285,7 +2285,7 @@ In the shutdown state, press the power button twice to enter the firmware upgrad
 Open the terminal and enter the command in the terminal:
 
 ```
-chmod +x LimonTest_Nano 
+chmod +x LimoTestV1.1_Nano
 ```
 
 #### 3. Launch the software and start to upgrade the firmware
@@ -2293,7 +2293,7 @@ chmod +x LimonTest_Nano
 Enter the command in the terminal:
 
 ```
-./LimonTest_Nano 
+./LimoTestV1.1_Nano
 ```
 
 After the software is successfully opened, click the upgrade button, and the displayed screen is as shown in the figure below:

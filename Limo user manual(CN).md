@@ -2298,7 +2298,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 打开终端，在终端中输入命令：
 
 ```
-chmod +x LimonTest_Nano 
+chmod +x LimoTestV1.1_Nano
 ```
 
 #### 3、启动软件，开始升级固件
@@ -2306,7 +2306,7 @@ chmod +x LimonTest_Nano
 在终端中输入命令：
 
 ```
-./LimonTest_Nano 
+./LimoTestV1.1_Nano 
 ```
 
 软件成功打开之后，点击升级按钮，显示的画面如下图所示：
