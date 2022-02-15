@@ -2261,7 +2261,7 @@ rosrun rqt_tf_tree rqt_tf_tree
 
 #### 5.2 下载需要烧录的镜像
 
-这里以我司提供的官方镜像为例，使用百度云盘下载镜像，下载链接为：https://pan.baidu.com/s/1MyyAR4y-Umyf_OwMk-rinA 提取码: 50d9 
+这里以我司提供的官方镜像为例，使用百度云盘下载镜像，下载链接为：https://pan.baidu.com/s/1baec7KVw6A-KT7V9xHGZyA 提取码: pkqv 
 
 #### 5.3 软件使用说明
 

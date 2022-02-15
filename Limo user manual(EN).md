@@ -2246,7 +2246,7 @@ Download and install balenaetcher on a PC; download link: https://www.balena.io/
 
 #### 5.2 Download the image to be burned
 
-Here is an example of the official image provided by our company. Use Baidu cloud disk to download the image, and the download link is:https://pan.baidu.com/s/1MyyAR4y-Umyf_OwMk-rinA Extract the code: 50d9 
+Here is an example of the official image provided by our company. Use Baidu cloud disk to download the image, and the download link is: https://pan.baidu.com/s/1baec7KVw6A-KT7V9xHGZyA Extract the code: pkqv 
 
 #### 5.3 Instructions on software usage
 
