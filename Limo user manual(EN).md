@@ -2390,16 +2390,16 @@ If you need to try to debug the parameters in the package yourself, you can refe
 | max_particles       | int      | 5000           | The maximum number of particles allowed.                     |
 | kld_err             | double   | 0.01           | The maximum error between the true distribution and the estimated distribution. |
 | kld_z               | double   | 0.99           | The upper normal quantile of (1-p), where p is the probability that the error on the estimated detuning will be less than kld_err. |
-| update_min_d        | double   | 0.2米          | A translation movement needs to be performed before performing the filter update. |
+| update_min_d        | double   | 0.2m           | A translation movement needs to be performed before performing the filter update. |
 | update_min_a        | double   | π/ 6.0 radians | A rotation movement needs to be performed before performing the filter update. |
 | resample_interval   | int      | 2              | The number of filter updates required before resampling.     |
 | transform_tolerance | double   | 0              | The time at which the published transformation will be post-processed to indicate that the transformation will be effective in the future. |
 | recovery_alpha_slow | double   | 0              | The exponential decay rate of the slow average weight filter is used to decide when to recover by adding random poses. A good value may be 0.001. |
-| recovery_alpha_fast | double   | 0.0米          | The exponential decay rate of the fast average weight filter is used to decide when to recover by adding random poses. A good value may be 0.1. |
-| initial_pose_x      | double   | 0.0米          | The initial pose average (x), used to initialize the filter with Gaussian distribution. |
-| initial_pose_y      | double   | 0.0弧度        | The initial pose average (y), used to initialize the filter with Gaussian distribution. |
-| initial_pose_a      | double   | 0.5 * 0.5米    | The initial pose average (yaw), used to initialize the filter with Gaussian distribution. |
-| initial_cov_xx      | double   | 0.5 * 0.5米    | The initial pose covariance (x * x), used to initialize the filter with Gaussian distribution. |
+| recovery_alpha_fast | double   | 0.0m           | The exponential decay rate of the fast average weight filter is used to decide when to recover by adding random poses. A good value may be 0.1. |
+| initial_pose_x      | double   | 0.0m           | The initial pose average (x), used to initialize the filter with Gaussian distribution. |
+| initial_pose_y      | double   | 0.0rad         | The initial pose average (y), used to initialize the filter with Gaussian distribution. |
+| initial_pose_a      | double   | 0.5 * 0.5m     | The initial pose average (yaw), used to initialize the filter with Gaussian distribution. |
+| initial_cov_xx      | double   | 0.5 * 0.5m     | The initial pose covariance (x * x), used to initialize the filter with Gaussian distribution. |
 | initial_cov_yy      | double   | -1.0 Hz        | The initial pose covariance (y * y), used to initialize the filter with Gaussian distribution. |
 | initial_cov_aa      | double   | 0.5 Hz         | The initial pose covariance (yaw * yaw), used to initialize the filter with Gaussian distribution. |
 | gui_publish_rate    | double   | FALSE          | The maximum rate (Hz) of publishing visual scans and paths. -1.0 is disabled. |
