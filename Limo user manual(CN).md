@@ -2610,7 +2610,15 @@ chmod +x LimoTestV1.1_Nano
 | odom_topic                                  | double | odom             | 里程计消息的主题名称，由机器人驱动程序或模拟器提供。         |
 | map_frame                                   | bool   | odom             | 全局规划框架（如果是静态地图，这个参数通常必须改为“/map”。   |
 
- 
+### 附录8、配套课程
+
+#### 	8.1免费课程视频
+
+​	百度云盘下载链接：https://pan.baidu.com/s/1UkOU3NligPyDeHA_h5Y9eQ，提取码：1234 
+
+#### 	8.2免费课程课件
+
+​	百度云盘下载链接：https://pan.baidu.com/s/1kCVmZVTs-wsbBPnWL2oNqg，提取码：1234 
 
  
 
