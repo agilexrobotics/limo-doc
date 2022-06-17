@@ -989,7 +989,7 @@ cd ~/agilex_ws/src/limo_ros/limo_bringup/maps/
 2、切换到/agilex_ws/limo_bringup/maps 之后，继续在终端中输入命令：
 
 ```
-rosrun map_server map_saver –f map1
+rosrun map_server map_saver -f map1
 ```
 
 注：map1为保存地图的名称，保存地图时应避免地图的名称重复
@@ -1311,7 +1311,7 @@ roslaunch limo_bringup limo_start.launch pub_odom_tf:=true
 （2）启动realsense，在终端中输入命令：
 
 ```
-roslaunch realsense2_camera rs_camera.launch align_depth:=true
+roslaunch realsense2_camera rs_aligned_depth.launch
 ```
 
 注：如果limo搭载ORBBEC®Dabai，请输入命令：
