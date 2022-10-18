@@ -46,7 +46,7 @@ Version: 1.0.0
         <td>指标</td>
 	</tr>
 	<tr>
-		<td rowspan="8">机械参数</td>
+		<td rowspan="9">机械参数</td>
 		<td>外形尺寸</td>
         <td>322*220*251mm</td>
 	</tr>
@@ -2307,7 +2307,7 @@ sudo dpkg -i sdkmanager_1.7.3-9053_amd64.deb
 
 ​	使用百度云盘下载镜像与烧录环境，下载链接为：链接: https://pan.baidu.com/s/16izE2rgS0d11Qg3POAfJew 提取码: f6ju 
 
-​	把下载好的文件解压到~/downloads目录中
+​	把下载好的文件解压到~/download目录中
 
 注意：下载的文件需要放置在英文文件中，文件路径不能出现中文
 
@@ -2614,11 +2614,11 @@ chmod +x LimoTestV1.1_Nano
 
 #### 	8.1免费课程视频
 
-​	百度云盘下载链接：https://pan.baidu.com/s/1UkOU3NligPyDeHA_h5Y9eQ，提取码：1234 
+​	百度云盘下载链接：https://pan.baidu.com/s/1z1H38D2uHPLuOQ4_xnkHrw，提取码：1234 
 
 #### 	8.2免费课程课件
 
-​	百度云盘下载链接：https://pan.baidu.com/s/1kCVmZVTs-wsbBPnWL2oNqg，提取码：1234 
+​	百度云盘下载链接：https://pan.baidu.com/s/1wpvWjYo3ME9ljzj9Eb2wJg，提取码：1234 
 
  
 
