@@ -111,7 +111,7 @@ At the same time, AgileX Robotics and Gu Yueju, the domestic ROS community teach
 	</tr>
     	<tr>
 		<td>IMU</td>
-        <td>MPU6050</td>
+        <td>HI226</td>
 	</tr>
     	<tr>
 		<td>CPU</td>

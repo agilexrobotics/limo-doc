@@ -107,7 +107,7 @@ Version: 1.0.0
 	</tr>
     	<tr>
 		<td>IMU</td>
-        <td>MPU6050</td>
+        <td>HI226</td>
 	</tr>
     	<tr>
 		<td>CPU</td>
@@ -176,6 +176,7 @@ Version: 1.0.0
         <td>蓝牙/极限距离10m</td>
 	</tr>
 </table>
+
 
 
 ### 1.4 Nvidia Jetson Nano介绍
