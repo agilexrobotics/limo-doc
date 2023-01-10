@@ -98,7 +98,7 @@ df -h
 
 ##### 1.2 下载需要烧录的镜像
 
-使用百度云盘下载镜像，下载链接为： 链接: 链接: https://pan.baidu.com/s/1zKmnETl2sWcZcaPOfYWtWQ 提取码: gkos 
+使用百度云盘下载镜像，下载链接为：链接: https://pan.baidu.com/s/1WTmhxJTVuXLcXFpoyaWy6A 提取码: 93qn 
 
 ##### 1.3 软件使用说明
 
