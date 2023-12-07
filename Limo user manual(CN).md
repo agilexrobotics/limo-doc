@@ -414,9 +414,9 @@ Nvidia Jetson Nano 是一款功能强大的小型计算机，专为支持入门�
 
 （4）APP遥控说明
 
-1、 首先在手机上下载我司提供的APP--Nexus，下载方式如下：
+1、 首先在手机上下载我司提供的APP--agilex，下载方式如下：
 
-IOS端下载：在AppStore搜索Nexus并下载
+IOS端下载：在AppStore搜索agilex并下载
 
 Android端扫描下面二维码：
 
