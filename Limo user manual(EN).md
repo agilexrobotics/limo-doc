@@ -1047,7 +1047,7 @@ The key to navigation is robot positioning and path planning. For these two core
 
 On the basis of the above two packages, ROS provides a complete navigation framework,
 
-![](./LIMO_image_EN/ROS 导航框架.png)
+![](LIMO_image_EN/ROS%20导航框架.png)
 
 The robot only needs to publish the necessary sensor information and navigation goal position, and ROS can complete the navigation function. In this framework, the move_base package provides the main operation and interactive interface of navigation. In order to ensure the accuracy of the navigation path, the robot also needs to accurately locate its own position. This part of the function is implemented by the amcl package.
 
@@ -1695,7 +1695,7 @@ Meta Package: In the new version of ROS, the concept of the original Stack is up
 
 Meta Package Manifest: Not shown in the figure below. It is similar to the package manifest. The difference is that the meta package manifest may contain packages that need to be relied upon at runtime or tags for declaring some references.
 
-![](./LIMO_image_EN/ROS 文件系统结构.png)
+![](./LIMO_image_EN/ROS%20文件系统结构.png)
 
 Message type: Message is the communication information published/subscribed between ROS nodes. You can use the message type provided by ROS, or you can use the .msg file to customize the required message type in the msg folder of the package.
 
@@ -1933,7 +1933,7 @@ Note: In the same workspace, no package with the same name is allowed, otherwise
 
 To use topic communication mechanism to control the movement of limo, you need to write two nodes, Publisher and Subscriber. Publisher is responsible for issuing speed control instructions to limo, and Subscriber is responsible for monitoring the speed received by limo.
 
-4.3.1 How to create Publisher
+##### 4.3.1 How to create a Publisher
 
 The main role of Publisher is to publish messages of specific data types for specific topics. We try to use code to implement a node, create a Publisher in the node and control the movement of limo. The source code file’s location is 
 
@@ -2113,9 +2113,9 @@ rosrun learning_limo talker
 
 If the Publisher node is running normally, the vehicle will move and the Subscriber node will also receive the message.
 
-##### 4.4 ROS common components
+#### 4.4 ROS common components
 
-4.4.1Launch File
+##### 4.4.1 Launch File
 
 The Launch File is a way to launch multiple nodes at the same time in ROS. It can also automatically start the ROS Master, and can realize various configurations of each node, which provides great convenience for the operation of multiple nodes.
 
