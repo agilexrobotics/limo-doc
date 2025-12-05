@@ -2619,7 +2619,7 @@ chmod +x LimoTestV1.1_Nano
 
 #### 	8.2免费课程课件
 
-​	百度云盘下载链接：https://pan.baidu.com/s/105uQqvEqVX1P2mdtJyUxNA?pwd=64u6，提取码：1234 
+​	百度云盘下载链接：https://pan.baidu.com/s/105uQqvEqVX1P2mdtJyUxNA?pwd=64u6 ，提取码：64u6
 
  
 
